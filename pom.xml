@@ -50,10 +50,10 @@
 		<artifactId>spring-cloud-starter-bootstrap</artifactId>
 	</dependency>
 
-	<!--		<dependency>-->
-	<!--			<groupId>org.springframework.cloud</groupId>-->
-	<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-	<!--		</dependency>-->
+	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	</dependency>
 
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -123,23 +123,23 @@
 		<artifactId>sonar-maven-plugin</artifactId>
 		<version>3.7.0.1746</version>
 	</plugin>
-</plugins>
-</build>
+	</plugins>
+	</build>
 
-<reporting>
-<plugins>
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-checkstyle-plugin</artifactId>
-		<version>3.1.2</version>
-		<reportSets>
-			<reportSet>
-				<reports>
-					<report>checkstyle</report>
-				</reports>
-			</reportSet>
-		</reportSets>
-	</plugin>
-</plugins>
-</reporting>
-		</project>
+	<reporting>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-checkstyle-plugin</artifactId>
+			<version>3.1.2</version>
+			<reportSets>
+				<reportSet>
+					<reports>
+						<report>checkstyle</report>
+					</reports>
+				</reportSet>
+			</reportSets>
+		</plugin>
+	</plugins>
+	</reporting>
+</project>

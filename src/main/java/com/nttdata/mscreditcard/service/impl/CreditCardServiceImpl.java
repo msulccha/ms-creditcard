@@ -14,8 +14,7 @@ import reactor.core.publisher.Mono;
 @Service
 public class CreditCardServiceImpl implements CreditCardService {
 
-    WebClient webClient = WebClient.create("http://ms-api-gateway/api/ms-customer/customer/");
-
+    WebClient webClient = WebClient.create("http://localhost:9090/api/ms-customer/customer/");
     @Autowired
     CreditCardRepository creditCardRepository;
 

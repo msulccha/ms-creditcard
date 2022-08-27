@@ -1,6 +1,6 @@
 package com.nttdata.mscreditcard.reporsitory;
 
-import com.nttdata.mscreditcard.entity.CreditCardEntity;
+import com.nttdata.mscreditcard.model.CreditCardEntity;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Flux;
 

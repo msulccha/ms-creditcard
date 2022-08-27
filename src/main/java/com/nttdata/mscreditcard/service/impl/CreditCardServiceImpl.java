@@ -1,7 +1,7 @@
 package com.nttdata.mscreditcard.service.impl;
 
-import com.nttdata.mscreditcard.entity.CreditCardEntity;
-import com.nttdata.mscreditcard.entity.CustomerEntity;
+import com.nttdata.mscreditcard.model.CreditCardEntity;
+import com.nttdata.mscreditcard.model.CustomerEntity;
 import com.nttdata.mscreditcard.reporsitory.CreditCardRepository;
 import com.nttdata.mscreditcard.service.CreditCardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 @Service
 public class CreditCardServiceImpl implements CreditCardService {
 
-    WebClient webClient = WebClient.create("http://localhost:8069/customer/");
+    WebClient webClient = WebClient.create("http://ms-api-gateway/api/ms-customer/customer/");
 
     @Autowired
     CreditCardRepository creditCardRepository;

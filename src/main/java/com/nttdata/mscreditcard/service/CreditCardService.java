@@ -1,8 +1,7 @@
 package com.nttdata.mscreditcard.service;
 
-import com.nttdata.mscreditcard.entity.CreditCardEntity;
-import com.nttdata.mscreditcard.entity.CustomerEntity;
-import org.springframework.stereotype.Service;
+import com.nttdata.mscreditcard.model.CreditCardEntity;
+import com.nttdata.mscreditcard.model.CustomerEntity;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

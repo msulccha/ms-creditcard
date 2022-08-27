@@ -1,7 +1,7 @@
 package com.nttdata.mscreditcard.controller;
 
-import com.nttdata.mscreditcard.entity.CreditCardEntity;
-import com.nttdata.mscreditcard.entity.CustomerEntity;
+import com.nttdata.mscreditcard.model.CreditCardEntity;
+import com.nttdata.mscreditcard.model.CustomerEntity;
 import com.nttdata.mscreditcard.service.CreditCardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @RestController
@@ -44,6 +45,7 @@ public class CreditCardController {
                 flatMap(c -> {
                     creditCard.setCustomer(c);
                     creditCard.setDate(LocalDateTime.now());
+                    creditCard.setExpirationDate(LocalDate.now().plusMonths(6));
                     return creditCardService.create(creditCard);
                 })
                 .map(savedCustomer -> new ResponseEntity<>(savedCustomer , HttpStatus.CREATED))
@@ -79,6 +81,8 @@ public class CreditCardController {
     public Mono<CustomerEntity> findCustomerById(@PathVariable String id){
         return creditCardService.findCustomerById(id);
     }
+
+
 
 
 

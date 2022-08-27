@@ -1,4 +1,4 @@
-package com.nttdata.mscreditcard.entity;
+package com.nttdata.mscreditcard.model;
 
 import lombok.Data;
 
